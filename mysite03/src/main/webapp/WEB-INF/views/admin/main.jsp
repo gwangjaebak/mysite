@@ -21,12 +21,12 @@
 						
 						<label class="block-label" for="welcomeMessage">환영 메세지</label>
 						<input id="welcomeMessage" name="welcome" type="text" value="${site.welcome }">
-
+						
 						<label class="block-label">프로필 이미지</label>
 						<img id="profile" src="${pageContext.request.contextPath }${site.profile }">
-						<input type="hidden" name="profile" value="${site.profile }" />
+						<input type="hidden" name="profile" value="${site.profile}" />
 						<input type="file" name="file">
-
+						
 						<label class="block-label">사이트 설명</label>
 						<textarea name="description">${site.description }</textarea>
 						

@@ -15,12 +15,12 @@
 		<div id="wrapper">
 			<div id="content">
 				<div id="site-introduction">
-					<img id="profile" src="${pageContext.request.contextPath }${site.profile }" style='width:200px'>
+					<img id="profile" src="${pageContext.request.contextPath }/${site.profile }" style='width:200px'>
 					<h2>${site.welcome }</h2>
 					<p>
 						${site.description }
 						<br><br>
-						<a href="${pageContext.request.contextPath }/guestbook">방명록</a>에 글 남기기<br>
+						<a href="${pageContext.request.contextPath}/guestbook">방명록</a>에 글 남기기<br>
 					</p>
 				</div>
 			</div>
