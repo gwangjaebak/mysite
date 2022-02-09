@@ -24,7 +24,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		return viewResolver;
 	}
 	// Message Converter
-
+	
 	
 	// DefaultServlet Handler
 	@Override
