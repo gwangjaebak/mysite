@@ -29,6 +29,7 @@ public class BoardController {
 		
 		model.addAttribute("map", map);
 		// 참고: model.addAllAttributes(map);
+		
 		return "board/index";
 	}
 

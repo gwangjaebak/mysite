@@ -20,16 +20,15 @@ import com.poscoict.mysite.interceptor.SiteInterceptor;
 @ComponentScan({"com.poscoict.mysite.controller", "com.poscoict.mysite.exception"})
 @Import({MvcConfig.class, SecurityConfig.class, MessageConfig.class, FileuploadConfig.class})
 public class WebConfig extends WebMvcConfigurerAdapter {
-	
-	// 인터셉터만 여기서 security는 따로
 	@Bean
 	public HandlerInterceptor siteInterceptor() {
 		return new SiteInterceptor();
 	}
-	
+
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(siteInterceptor())
-		.addPathPatterns("/**");
+		registry
+			.addInterceptor(siteInterceptor())
+			.addPathPatterns("/**");
 	}
 }

@@ -9,7 +9,7 @@ import com.poscoict.config.app.DBConfig;
 import com.poscoict.config.app.MyBatisConfig;
 
 @Configuration
-@EnableAspectJAutoProxy // aop:aspect 대체
+@EnableAspectJAutoProxy
 @ComponentScan({"com.poscoict.mysite.service", "com.poscoict.mysite.repository", "com.poscoict.mysite.aspect"})
 @Import({DBConfig.class, MyBatisConfig.class})
 public class AppConfig {

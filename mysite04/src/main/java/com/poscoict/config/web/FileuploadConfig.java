@@ -16,6 +16,7 @@ public class FileuploadConfig extends WebMvcConfigurerAdapter {
 	
 	@Autowired
 	private Environment env;
+	
 	// Multipart Resolver
 	@Bean
 	public MultipartResolver multipartResolver() {
@@ -30,8 +31,7 @@ public class FileuploadConfig extends WebMvcConfigurerAdapter {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry
-		.addResourceHandler(env.getProperty("fileupload.resourceMapping"))
-		.addResourceLocations("file:" + env.getProperty("fileupload.uploadLocations"));
+			.addResourceHandler(env.getProperty("fileupload.resourceMapping"))
+			.addResourceLocations("file:" + env.getProperty("fileupload.uploadLocation"));
 	}
-	
 }

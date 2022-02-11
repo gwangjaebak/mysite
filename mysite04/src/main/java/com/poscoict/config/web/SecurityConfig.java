@@ -14,16 +14,14 @@ import com.poscoict.mysite.security.AuthUserHandlerMethodArgumentResolver;
 import com.poscoict.mysite.security.LoginInterceptor;
 import com.poscoict.mysite.security.LogoutInterceptor;
 
-
 @Configuration
 public class SecurityConfig extends WebMvcConfigurerAdapter {
-	
 	// Argument Resolver
 	@Bean
 	public HandlerMethodArgumentResolver handlerMethodArgumentResolver() {
 		return new AuthUserHandlerMethodArgumentResolver();
 	}
-
+	
 	@Override
 	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
 		argumentResolvers.add(handlerMethodArgumentResolver());
@@ -34,12 +32,12 @@ public class SecurityConfig extends WebMvcConfigurerAdapter {
 	public HandlerInterceptor loginInterceptor() {
 		return new LoginInterceptor();
 	}
-	
+
 	@Bean
 	public HandlerInterceptor logoutInterceptor() {
 		return new LogoutInterceptor();
 	}
-	
+
 	@Bean
 	public HandlerInterceptor authInterceptor() {
 		return new AuthInterceptor();
@@ -54,14 +52,12 @@ public class SecurityConfig extends WebMvcConfigurerAdapter {
 		registry
 			.addInterceptor(logoutInterceptor())
 			.addPathPatterns("/user/logout");
-		
+
 		registry
 			.addInterceptor(authInterceptor())
 			.addPathPatterns("/**")
 			.excludePathPatterns("/user/auth")
 			.excludePathPatterns("/user/logout")
-			.excludePathPatterns("/assets/**");
+			.excludePathPatterns("/asset/**");
 	}
-	
-	
 }

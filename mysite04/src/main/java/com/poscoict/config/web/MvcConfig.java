@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @EnableWebMvc
 public class MvcConfig extends WebMvcConfigurerAdapter {
-
+	
 	// View Resolver
 	@Bean
 	public ViewResolver viewResolver() {
@@ -26,11 +26,9 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	
 	// Message Converter
 	
-	
-	// DefaultServlet Handler
+	// Default Servlet Handler
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 		configurer.enable();
 	}
-	
 }
