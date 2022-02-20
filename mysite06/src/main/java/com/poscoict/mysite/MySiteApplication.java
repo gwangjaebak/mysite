@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class MySiteApllication {
+public class MySiteApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(MySiteApllication.class, args);
+		SpringApplication.run(MySiteApplication.class, args);
 	}
 }
