@@ -1,6 +1,6 @@
 package com.poscoict.mysite.service;
 
-import org.springframework.beans.factory.annotation.Autowired; 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.poscoict.mysite.repository.UserRepository;
@@ -25,5 +25,9 @@ public class UserService {
 
 	public void updateUser(UserVo userVo) {
 		userRepository.update(userVo);
+	}
+
+	public UserVo getUser(String email) {
+		return userRepository.findByEmail(email);
 	}
 }
