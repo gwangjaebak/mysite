@@ -14,7 +14,7 @@ import com.poscoict.mysite.service.GuestbookService;
 import com.poscoict.mysite.vo.GuestbookVo;
 
 @Controller
-@RequestMapping("/guestbook")
+@RequestMapping("/api/guestbook")
 public class GuestbookController {
 	@Autowired
 	GuestbookService guestbookService;
